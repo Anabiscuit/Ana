@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+
+  <style>
+    body {
+      background-color: rgb(243, 230, 231);
+    }
+
+    h2 {
+      text-align: center;
+      color: black;
+      font-size: 50px;
+      font-style: italic
+    }
+    
+    h4 {
+      text-align: center;
+      font-style: oblique;
+    }
+
+    hr.padrao {
+      margin-left: 8%;
+      margin-right: 10%;
+      border: 4px solid #ff0066;
+      border-radius: 50%;
+    }
+    hr.nav{
+      margin-left: 0%;
+    }
+    
+
+    p {
+      text-align: center;
+      color: rgb(34, 34, 34);
+
+    }
+
+    ul {
+      margin-left: 35%;
+      margin-bottom: 30%;
+      text-align: center;
+      font-size: larger;
+    }
+    
+    .card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card .ratio {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: 100%;
+    }
+
+    .soma {
+      margin-left: 25%;
+      border: 3px solid #ff0066;
+      padding: 10px;
+    }
+
+    .img {
+      margin-left: 6%;
+    }
+
+    footer {
+      background-color: #ff0066;
+      padding: 8px 0;
+      color: black;
+      text-align: right;
+
+    }
+
+    .info {
+      text-align: right;
+    }
+
+    .info p {
+      margin: 5px 0;
+      /* Adiciona um pequeno espaçamento entre as informações */
+      color: black;
+      /* Tom de rosa mais escuro para o texto */
+      text-align: left;
+      margin-left: 6%;
+    }
+
+
+    /* Estilo opcional para links no rodapé */
+    .info a {
+      color: #ff0066;
+      text-decoration: none;
+    }
+
+    .info a:hover {
+      text-decoration: underline;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin-left: 20%;
+
+    }
+
+    th,
+    td {
+      padding: 8px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+
+
+
+    th:first-child,
+    td:first-child {
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    th:last-child,
+    td:last-child {
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    th:not(:last-child),
+    td:not(:last-child) {
+      border-right: 1px solid black;
+    }
+    table{
+      margin-left: 24%;
+    }
+  </style>
+
+
+</head>
+
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-pink">
+    <div class="container-fluid">
+      <img class="img" src="logopronta.png" class="img-fluid" width="100" height="100" alt="logo">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="Inicio.html">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Produtos.html">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contato.html">Contato</a>
+          </li>
+
+        </ul>
+        <div class="soma">
+          <img src="carrinhocompra.jpg" width="40" height="40">
+          <h4 id="total"> Total</h4>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <hr class="nav">
+  <br>
+
+  
+  <hr class="padrao">  
+  <div class="container">
+    <h4>ATENÇÃO</h4>
+    <p> <strong>Seu pedido será enviado em até 5 dias úteis após pagamento.</strong></p>
+  </div>
+  <hr class="padrao">  
+
+  <br><br>
+
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-12">
+        <h3 class="main-title">Doces </h3>
+        <br>
+        <h5 class="subtitle">Doces cenográficos em tamanho real, para compor seu cenário. </h5>
+        <br>
+
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card" style="width: 18rem;">
+          <div class="ratio ratio-4x3">
+
+            <img src="brigadeiro.jpg" class="card-img-top" alt="brigadeiro">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Confeitos </h5>
+            <p class="card-text"> Kit com 4 unidades</p>
+            <a href="#" class="btn btn-primary " onclick="soma(10)"> R$ 10,00</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card" style="width: 18rem;">
+          <div class="ratio ratio-4x3">
+            <img src="donuts2.jpg" class="card-img-top" alt="donuts2">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Donuts </h5>
+            <p class="card-text"> Kit com 3 donuts coloridos </p>
+            <a href="#" class="btn btn-primary " onclick="soma(15)"> R$ 15,00
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card" style="width: 18rem;">
+          <div class="ratio ratio-4x3">
+            <img src="oreo.jpg" class="card-img-top" alt="oreo">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Oreo </h5>
+            <p class="card-text"> Kit com 4 unidades </p>
+            <a href="#" class="btn btn-primary " onclick="soma(15)"> R$ 15,00
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card" style="width: 18rem;">
+          <div class="ratio ratio-4x3">
+            <img src="alfajor.jpg" class="card-img-top" alt="alfajor">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Alfajor </h5>
+            <p class="card-text"> Kit com 4 unidades </p>
+            <a href="#" class="btn btn-primary " onclick="soma(20)"> R$ 20,00
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-12">
+        <br>
+        <hr class="padrao"> 
+
+        <h3 class="main-title">Apliques </h3>
+        <br>
+        <h5 class="subtitle"> Solte sua criatvidade e use nossos apliques para fazer seus laços, imãs,pulseiras,
+          chaveiros e o que sua imaginação permitir.</h5>
+        <br>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card" style="width: 18rem;">
+          <div class="ratio ratio-4x3">
+            <img src="apliquesereia.jpg" class="card-img-top" alt="sereia">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Aplique Sereia </h5>
+            <p class="card-text"> Unidade </p>
+            <a href="#" class="btn btn-primary " onclick="soma(12)"> R$ 12,00 </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card" style="width: 18rem;">
+          <div class="ratio ratio-4x3">
+            <img src="apliquemeninas.jpg" class="card-img-top" alt="meninas">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Aplique Pititicas </h5>
+            <p class="card-text"> Unidade </p>
+            <a href="#" class="btn btn-primary " onclick="soma(12)"> R$ 12,00 </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card" style="width: 18rem;">
+          <div class="ratio ratio-4x3">
+            <img src="bonecapascoa.jpg" class="card-img-top" alt="pascoa">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Aplique Pititicas de Pascoa </h5>
+            <p class="card-text"> Unidade </p>
+            <a href="#" class="btn btn-primary " onclick="soma(12)"> R$ 12,00 </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card" style="width: 18rem;">
+          <div class="ratio ratio-4x3">
+            <img src="apliquebichinhos.jpg" class="card-img-top" alt="bichinhos">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Aplique Bichinhos </h5>
+            <p class="card-text"> Unidade </p>
+            <a href="#" class="btn btn-primary " onclick="soma(12)"> R$ 12,00 </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-12">
+        <br>
+        <hr class="padrao"> 
+        <h3 class="main-title"> Velas </h3>
+        <br>
+        <h5 class="subtitle"> Velas Personalizadas para topo de bolo.</h5>
+        <br>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card" style="width: 18rem;">
+          <div class="ratio ratio-4x3">
+            <img src="Velaunicornio.img.jpeg" class="card-img-top" alt="unicornio">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Vela Unicórnio </h5>
+            <p class="card-text"> Unidade </p>
+            <a href="#" class="btn btn-primary " onclick="soma(40)"> R$ 40,00 </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card" style="width: 18rem;">
+          <div class="ratio ratio-4x3">
+            <img src="velapatrulhacanina.jpg" class="card-img-top" alt="patrulha canina">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Vela Patrulha Canina </h5>
+            <p class="card-text"> Unidade </p>
+            <a href="#" class="btn btn-primary " onclick="soma(55)"> R$ 55,00
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card" style="width: 18rem;">
+          <div class="ratio ratio-4x3">
+            <img src="velabruxinha.jpg" class="card-img-top" alt="bruxinha">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Vela Bruxinha halloween </h5>
+            <p class="card-text"> Unidade </p>
+            <a href="#" class="btn btn-primary " onclick="soma(55)"> R$ 55,00
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card" style="width: 18rem;">
+          <div class="ratio ratio-4x3">
+            <img src="velapokemon.jpg" class="card-img-top" alt="pokemon">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Vela Pokemon com Nome</h5>
+            <p class="card-text"> Unidade </p>
+            <a href="#" class="btn btn-primary " onclick="soma(55)"> R$ 55,00
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-12">
+        <br>
+        <hr class="padrao"> 
+
+        <h3 class="main-title">Acessórios </h3>
+        <br>
+        <h5 class="subtitle"> Brincos e Berloques para usar e ousar.</h5>
+        <br>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card" style="width: 18rem;">
+          <div class="ratio ratio-4x3">
+            <img src="brincochocolate.jpg" class="card-img-top" alt="Brinco chocolate">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Brinco Barrinha de Chocolate</h5>
+            <p class="card-text"> Par </p>
+            <a href="#" class="btn btn-primary " onclick="soma(18)"> R$ 18,00 </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card" style="width: 18rem;">
+          <div class="ratio ratio-4x3">
+            <img src="brincocogumelo.jpg" class="card-img-top" alt="Brinco cogumelo">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Brinco Cogumelo Encantado </h5>
+            <p class="card-text"> Par </p>
+            <a href="#" class="btn btn-primary " onclick="soma(16)"> R$ 16,00 </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card" style="width: 18rem;">
+          <div class="ratio ratio-4x3">
+            <img src="berloquepizza.jpg" class="card-img-top" alt="berloqueabelha">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Berloques formato pizza para pulseirinhas </h5>
+            <p class="card-text"> Kit com 3 </p>
+            <a href="#" class="btn btn-primary " onclick="soma(20)"> R$ 20,00 </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card" style="width: 18rem;">
+          <div class="ratio ratio-4x3">
+            <img src="berloqueabelha.jpg" class="card-img-top" alt="berloqueabelha">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Berloque abelhinhas para pulseiras </h5>
+            <p class="card-text"> kit com 3 </p>
+            <a href="#" class="btn btn-primary " onclick="soma(25)"> R$ 25,00 </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <hr class="padrao"> 
+  <table>
+    <tr>
+      <th> <img src="caminhaofrete3.jpg" width="35px" height="35px" alt="Imagem 1"> ENVIAMOS SUAS COMPRAS</th>
+      <th> <img src="cartaocredito.jpg" width="30px" height="30px" alt="Imagem 1"> PAGUE COMO QUISER</th>
+      <th> <img src="cadeado.jpg" width="30px" height="30px" alt="Imagem 1"> COMPRE COM SEGURANÇA</th>
+    </tr>
+    <tr>
+      <td>Entrega em todo país</td>
+      <td>Cartões de crédito ou pix</td>
+      <td>Seus dados sempre protegidos</td>
+    </tr>
+  </table>
+  <hr class="padrao"> 
+  <br>
+
+  <!-- Rodapé -->
+  <footer>
+
+
+
+    <div class="container text-center">
+      <div class="row  align-items-center">
+        <div class="col">
+          <div class="info">
+            <P><strong>Contate-nos</strong></P>
+            <p>Whatsapp: (48) 9851-9687 <img src="whats.jpg" width="20px" height="20px" alt="whats"></p>
+            <p>Instagram: @anabiscuit <img src="insta.jpg" width="20px" height="20px" alt="whats"></p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="info">
+            <p>&copy; 2023 RG & RL.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+  </footer>
+
+  <script>
+    total = 0
+    function soma(preço) {
+      total = total + preço
+      document.getElementById("total").innerHTML = "Total=R$" + total.toFixed(2)
+    }
+  </script>
+
+</body>
+
+</html>
